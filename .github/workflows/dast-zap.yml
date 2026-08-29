@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies and init DB
         run: |
-          pip install -r requirements.txt
+          pip install --only-binary :all: -r requirements.txt
           python db/create_db_tables.py
 
       - name: Start ThreatByte app in background
