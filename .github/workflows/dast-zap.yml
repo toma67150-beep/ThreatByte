@@ -42,7 +42,7 @@ jobs:
       - name: Run ZAP Baseline Scan via Docker
         run: |
           mkdir -p zap-output
-          chmod 777 zap-output
+          chmod 755 zap-output
           docker run --rm \
             --network=host \
             -v ${{ github.workspace }}/zap-output:/zap/wrk \
